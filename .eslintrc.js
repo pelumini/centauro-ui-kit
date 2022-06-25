@@ -28,7 +28,10 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
-    'no-use-before-define': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'import/no-cycle': 'off',
+    'no-shadow': 'off',
     'react-hooks/exhaustive-deps': [
       'warn',
       {
@@ -62,6 +65,7 @@ module.exports = {
         },
       },
     ],
+    'no-restricted-exports': 'off',
     'no-unused-vars': 'warn',
     'object-curly-newline': 'off',
     'consistent-return': 'off',
