@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Layout } from 'components';
-import { HomePage, ButtonPage, IconPage } from 'pages';
+import { HomePage, ButtonPage, IconPage, AccordionPage } from 'pages';
 import { ROUTES } from 'routes';
 import './App.scss';
 
@@ -17,6 +17,7 @@ export const App: React.FC = () => {
           <Route exact path={ROUTES.HOME} component={HomePage} />
           <Route exact path={ROUTES.BUTTON} component={ButtonPage} />
           <Route exact path={ROUTES.ICON} component={IconPage} />
+          <Route exact path={ROUTES.ACCORDION} component={AccordionPage} />
         </Switch>
       </Layout>
     </div>
