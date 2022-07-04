@@ -58,6 +58,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "storybook": "start-storybook -p 9009 -s public,src/ui-kit/assets",
+    "build-storybook": "build-storybook -s public,src/ui-kit/assets",
     "prepare": "husky install",
     "lint": "eslint src",
     "lint:fix": "eslint --fix .",
