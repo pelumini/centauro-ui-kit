@@ -10,6 +10,7 @@ import ErrorPage from './ErrorPage';
 import FormPage from './FormPage';
 import HamburgerPage from './HamburgerPage';
 import HomePage from './HomePage';
+import IconButtonPage from './IconButtonPage';
 import IconPage from './IconPage';
 import ModalPage from './ModalPage';
 import OverlayPage from './OverlayPage';
@@ -56,4 +57,5 @@ export {
   ErrorPage,
   SelectPage,
   UploaderPage,
+  IconButtonPage,
 };

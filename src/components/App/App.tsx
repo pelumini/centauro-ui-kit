@@ -30,6 +30,7 @@ import {
   FormPage,
   SelectPage,
   UploaderPage,
+  IconButtonPage,
 } from 'pages';
 import { ROUTES } from 'routes';
 import './App.scss';
@@ -75,6 +76,7 @@ export const App: React.FC = () => {
           <Route exact path={ROUTES.ERROR} component={ErrorPage} />
           <Route exact path={ROUTES.SELECT} component={SelectPage} />
           <Route exact path={ROUTES.UPLOADER} component={UploaderPage} />
+          <Route exact path={ROUTES.ICON_BUTTON} component={IconButtonPage} />
         </Switch>
       </Layout>
     </div>

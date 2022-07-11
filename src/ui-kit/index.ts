@@ -4,6 +4,7 @@ import { Alert, AlertType } from './Alert';
 import Avatar from './Avatar';
 import { Breadcrumbs } from './Breadcrumbs';
 import Button from './Button';
+import { IconButton } from './Button';
 import Checkbox from './Checkbox';
 import CheckboxGroup from './Checkbox/CheckboxGroup';
 import DocumentViewer from './DocumentViewer';
@@ -65,4 +66,5 @@ export {
   Breadcrumbs,
   Uploader,
   UploaderPreview,
+  IconButton,
 };
