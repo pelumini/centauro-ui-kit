@@ -1,0 +1,53 @@
+/* eslint-disable no-unused-expressions */
+import React, { useState, useEffect } from 'react';
+import isEmpty from 'lodash/isEmpty';
+import isNil from 'lodash/isNil';
+import { IUploaderConfig } from './types';
+import { UploaderDropzone } from './UploaderDropzone/UploaderDropzone';
+
+interface IUploaderProps {
+  config?: IUploaderConfig;
+  onFilesUploadedAll?: (handleFilesAllAdd: File[]) => void;
+}
+
+export const Uploader: React.FC<IUploaderProps> = ({
+  config,
+  onFilesUploadedAll,
+}) => {
+  const UPLOADER_CONFIG_DEFAULT: IUploaderConfig = {
+    accept: [],
+  };
+  const [files, setFiles] = useState<File[]>([]);
+
+  const handleDrop = (acceptedFiles: File[]) => {
+    if (!isEmpty(files)) {
+      const newFiles = [...files, ...acceptedFiles];
+      setFiles(newFiles);
+    } else {
+      const newFiles = [...acceptedFiles];
+      setFiles(newFiles);
+    }
+  };
+
+  const handleFilesAllAdd = (files: File[]) => {
+    return files;
+  };
+
+  useEffect(() => {
+    onFilesUploadedAll && onFilesUploadedAll(handleFilesAllAdd(files));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [files]);
+
+  return (
+    <div className="Uploader">
+      {!isNil(config) ? (
+        <UploaderDropzone config={config} onDrop={handleDrop} />
+      ) : (
+        <UploaderDropzone
+          config={UPLOADER_CONFIG_DEFAULT}
+          onDrop={handleDrop}
+        />
+      )}
+    </div>
+  );
+};

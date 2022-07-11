@@ -26,11 +26,11 @@ const schema = yup.object().shape({
     .string()
     .matches(/^([^0-9]*)$/, 'The last name must not contain numbers')
     .required('Write your last name'),
-  phoneNumber: yup.string().required('Укажите номер телефона'),
+  phoneNumber: yup.string().required('Enter your phone number'),
   email: yup
     .string()
     .required('Укажите Email')
-    .email('Неверный email. Проверьте, правильно ли введён email'),
+    .email('Invalid email. Check if entered correctly email'),
   password: yup
     .string()
     .required('Write your password')
@@ -94,7 +94,7 @@ export const FormPage: React.FC = () => {
       return message;
     }
     if (!isPasswordMatch) {
-      return 'Пароли не совпадают';
+      return 'Passwords do not match';
     }
   };
 
@@ -127,7 +127,7 @@ export const FormPage: React.FC = () => {
               onFocus={handleFocus}
             />
             <FormField
-              label="Мобильный телефон"
+              label="Mobile Phone"
               name="phoneNumber"
               type="tel"
               register={register}
@@ -138,7 +138,7 @@ export const FormPage: React.FC = () => {
               onBlur={handleBlur}
             />
             <FormField
-              label="Электронная почта"
+              label="Email"
               name="email"
               type="text"
               register={register}
