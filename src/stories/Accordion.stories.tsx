@@ -7,10 +7,10 @@ export const stories = () => (
   <div>
     <div className="story">
       <label>Accordion</label>
-      <Accordion title="Card" isActive={true}>
+      <Accordion title="Card" isActive>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          industry. Lorem Ipsum has been the industrys standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book. It has survived not only
           five centuries, but also the leap into electronic typesetting,
@@ -25,10 +25,10 @@ export const stories = () => (
     <div className="story">
       <label>Accordion Group</label>
       <AccordionGroup title="Group">
-        <Accordion title="Card one" isActive={true}>
+        <Accordion title="Card one" isActive>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
+            industry. Lorem Ipsum has been the industrys standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book. It has survived not
             only five centuries, but also the leap into electronic typesetting,
@@ -38,10 +38,10 @@ export const stories = () => (
             PageMaker including versions of Lorem Ipsum
           </p>
         </Accordion>
-        <Accordion title="Card two" isActive={true}>
+        <Accordion title="Card two" isActive>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
+            industry. Lorem Ipsum has been the industrys standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book. It has survived not
             only five centuries, but also the leap into electronic typesetting,
