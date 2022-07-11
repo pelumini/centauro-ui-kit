@@ -1,6 +1,6 @@
 import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 import classNames from 'classnames';
-// import { Icon, IconType } from 'ui-kit';
+import { Icon, IconType } from 'ui-kit';
 import './Button.scss';
 
 export interface IButtonProps
@@ -9,6 +9,7 @@ export interface IButtonProps
     HTMLButtonElement
   > {
   className?: string;
+  typeIcon?: IconType;
   isDisabled?: boolean;
   onClick?: (event: React.MouseEvent) => void;
 }
@@ -16,6 +17,7 @@ export interface IButtonProps
 export const Button: React.FC<IButtonProps> = ({
   className,
   children,
+  typeIcon,
   isDisabled = false,
   onClick,
   ...rest
@@ -30,7 +32,8 @@ export const Button: React.FC<IButtonProps> = ({
       onClick={onClick}
       {...rest}
     >
-      <span>{children}</span>
+      {typeIcon && <Icon type={typeIcon} data-testid="test-button-icon" />}
+      <span className={typeIcon ? 'Button-Text' : ''}>{children}</span>
     </button>
   );
 };

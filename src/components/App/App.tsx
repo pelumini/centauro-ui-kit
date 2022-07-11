@@ -1,7 +1,14 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Layout } from 'components';
-import { HomePage, ButtonPage, IconPage, AccordionPage } from 'pages';
+import {
+  HomePage,
+  ButtonPage,
+  IconPage,
+  AccordionPage,
+  CheckboxPage,
+  ModalPage,
+} from 'pages';
 import { ROUTES } from 'routes';
 import './App.scss';
 
@@ -18,6 +25,8 @@ export const App: React.FC = () => {
           <Route exact path={ROUTES.BUTTON} component={ButtonPage} />
           <Route exact path={ROUTES.ICON} component={IconPage} />
           <Route exact path={ROUTES.ACCORDION} component={AccordionPage} />
+          <Route exact path={ROUTES.CHECKBOX} component={CheckboxPage} />
+          <Route exact path={ROUTES.MODAL} component={ModalPage} />
         </Switch>
       </Layout>
     </div>
